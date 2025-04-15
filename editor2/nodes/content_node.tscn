@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpclr4kfhdtw"]
+
+[ext_resource type="Script" uid="uid://cplgwpt8mf8y6" path="res://editor2/nodes/content_node.gd" id="1_my7tj"]
+
+[node name="ContentNode" type="GraphNode" node_paths=PackedStringArray("content")]
+offset_right = 250.0
+offset_bottom = 175.0
+mouse_filter = 1
+resizable = true
+title = "Content"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_my7tj")
+content = NodePath("Content")
+
+[node name="Content" type="TextEdit" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+wrap_mode = 1
+scroll_fit_content_height = true

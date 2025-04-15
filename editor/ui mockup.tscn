@@ -1,0 +1,275 @@
+[gd_scene load_steps=5 format=3 uid="uid://cynfqy4ncdc3w"]
+
+[ext_resource type="Script" uid="uid://ux353t47p7f" path="res://editor/mockup.gd" id="1_hacc8"]
+[ext_resource type="Texture2D" uid="uid://b37n3so36v2u6" path="res://editor/Add.svg" id="2_rspt4"]
+
+[sub_resource type="SystemFont" id="SystemFont_rfryw"]
+font_names = PackedStringArray("Sans-Serif")
+font_italic = true
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vrqt"]
+font = SubResource("SystemFont_rfryw")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer/Panel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "File"
+item_count = 3
+popup/item_0/text = "Save"
+popup/item_0/id = 0
+popup/item_1/text = "Load"
+popup/item_1/id = 1
+popup/item_2/text = "Export to json"
+popup/item_2/id = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+right_disconnects = true
+script = ExtResource("1_hacc8")
+
+[node name="GraphNode" type="GraphNode" parent="VBoxContainer/Control/GraphEdit"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 203.0
+offset_right = 194.0
+offset_bottom = 298.0
+mouse_filter = 1
+position_offset = Vector2(29, 203)
+title = "Label"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "ID"
+
+[node name="GraphNode3" type="GraphNode" parent="VBoxContainer/Control/GraphEdit"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 141.0
+offset_right = 451.0
+offset_bottom = 317.0
+mouse_filter = 1
+position_offset = Vector2(247, 141)
+title = "Content"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode3"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+
+[node name="GraphNode2" type="GraphNode" parent="VBoxContainer/Control/GraphEdit"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 345.0
+offset_right = 587.0
+offset_bottom = 519.0
+mouse_filter = 1
+position_offset = Vector2(371, 345)
+title = "Content"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode2"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+
+[node name="GraphNode5" type="GraphNode" parent="VBoxContainer/Control/GraphEdit"]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 159.0
+offset_right = 853.0
+offset_bottom = 464.0
+mouse_filter = 1
+position_offset = Vector2(638, 159)
+title = "Branch"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = false
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = true
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = true
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+
+[node name="Button" type="Button" parent="VBoxContainer/Control/GraphEdit/GraphNode5"]
+layout_mode = 2
+text = "Add Choice"
+icon = ExtResource("2_rspt4")
+alignment = 0
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/GraphEdit/GraphNode5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer"]
+layout_mode = 2
+text = "repeatable choice #1"
+label_settings = SubResource("LabelSettings_5vrqt")
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+scroll_fit_content_height = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Control/GraphEdit/GraphNode5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer2"]
+layout_mode = 2
+text = "once choice #2"
+label_settings = SubResource("LabelSettings_5vrqt")
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+scroll_fit_content_height = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Control/GraphEdit/GraphNode5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer3"]
+layout_mode = 2
+text = "conditional choice #3"
+label_settings = SubResource("LabelSettings_5vrqt")
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "content"
+scroll_fit_content_height = true
+
+[node name="TextEdit2" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode5/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "lua conditional"
+scroll_fit_content_height = true
+
+[node name="GraphNode4" type="GraphNode" parent="VBoxContainer/Control/GraphEdit"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 220.0
+offset_right = 1054.0
+offset_bottom = 310.0
+mouse_filter = 1
+position_offset = Vector2(872, 220)
+title = "End"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Control/GraphEdit/GraphNode4"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "end ID"
+
+[node name="Button" type="Button" parent="VBoxContainer/Control"]
+layout_mode = 2
+offset_left = 994.0
+offset_top = 15.0
+offset_right = 1113.0
+offset_bottom = 46.0
+grow_horizontal = 0
+text = "Add new node"
+
+[connection signal="connection_request" from="VBoxContainer/Control/GraphEdit" to="VBoxContainer/Control/GraphEdit" method="_on_connection_request"]
+[connection signal="disconnection_request" from="VBoxContainer/Control/GraphEdit" to="VBoxContainer/Control/GraphEdit" method="_on_disconnection_request"]
+[connection signal="pressed" from="VBoxContainer/Control/Button" to="VBoxContainer/Control/GraphEdit" method="_on_button_pressed"]

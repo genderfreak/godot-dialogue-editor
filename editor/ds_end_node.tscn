@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://q5o3wcaavcw8"]
+
+[ext_resource type="Script" uid="uid://ijrqw5oygfgw" path="res://editor/ds_base_node.gd" id="1_bnj6v"]
+
+[node name="DSEndNode" type="GraphNode"]
+offset_right = 175.0
+offset_bottom = 90.0
+mouse_filter = 1
+title = "End"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_bnj6v")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "end ID"

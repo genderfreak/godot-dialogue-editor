@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://da2enr760yuqo"]
+
+[ext_resource type="Script" uid="uid://cyqcl06qifwvy" path="res://editor2/editor.gd" id="1_8g0po"]
+[ext_resource type="PackedScene" uid="uid://bimx3jhhe854s" path="res://editor2/nodes/base_node.tscn" id="2_8g0po"]
+
+[node name="Editor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8g0po")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="FileMenu" type="MenuButton" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "File"
+flat = false
+
+[node name="NodeMenu" type="MenuButton" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Node"
+flat = false
+alignment = 0
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+snapping_enabled = false
+right_disconnects = true
+
+[node name="BaseNode" parent="VBoxContainer/Control/GraphEdit" instance=ExtResource("2_8g0po")]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 272.0
+offset_right = 690.0
+offset_bottom = 362.0
+position_offset = Vector2(515, 272)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0106597
+anchor_top = 0.0933665
+anchor_right = 0.0106597
+anchor_bottom = 0.0933665
+offset_left = -0.279999
+offset_top = -0.299999
+offset_right = 167.72
+offset_bottom = 219.7
+metadata/_edit_use_anchors_ = true

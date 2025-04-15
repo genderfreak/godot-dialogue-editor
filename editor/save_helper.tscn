@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2222tmckyq54"]
+
+[ext_resource type="Script" uid="uid://cc1lpsupi1tg8" path="res://editor/save_helper.gd" id="1_ypkaq"]
+
+[node name="SaveHelper" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ypkaq")
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+access = 2
+filters = PackedStringArray("*.tscn; Dialogue System Scene File")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="LoadDialog" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.tscn; Dialogue System Scene File")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="AutosaveTimer" type="Timer" parent="."]
