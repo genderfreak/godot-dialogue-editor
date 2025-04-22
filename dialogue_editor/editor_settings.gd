@@ -1,13 +1,13 @@
 extends Node
 
 var node_files: Array = [
-	"res://editor2/nodes/base_node.tscn",
-	"res://editor2/nodes/content_node.tscn",
-	"res://editor2/nodes/branch_node.tscn",
+	"res://dialogue_editor/nodes/content_node.tscn",
+	"res://dialogue_editor/nodes/branch_node.tscn",
+	"res://dialogue_editor/nodes/base_node.tscn",
 ]
 
 var choice_files: Array = [
-	"res://editor2/nodes/choices/base_choice.tscn",
+	"res://dialogue_editor/nodes/choices/base_choice.tscn"
 ]
 
 var node_types: Dictionary

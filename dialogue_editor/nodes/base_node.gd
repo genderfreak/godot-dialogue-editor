@@ -10,7 +10,7 @@ var popup_items = [
 ]
 
 ## Change unique name popup
-var _name_popup_scn: PackedScene = preload("res://editor2/name_popup.tscn")
+var _name_popup_scn: PackedScene = preload("res://dialogue_editor/name_popup.tscn")
 var _name_popup: ConfirmationDialog
 
 # Stuff to save
