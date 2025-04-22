@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://da2enr760yuqo"]
+[gd_scene load_steps=4 format=3 uid="uid://da2enr760yuqo"]
 
 [ext_resource type="Script" uid="uid://cyqcl06qifwvy" path="res://editor2/editor.gd" id="1_8g0po"]
-[ext_resource type="PackedScene" uid="uid://bimx3jhhe854s" path="res://editor2/nodes/base_node.tscn" id="2_8g0po"]
+[ext_resource type="Script" uid="uid://ca7o5vj81vga3" path="res://editor2/graph_edit.gd" id="2_n0aaf"]
+[ext_resource type="Texture2D" uid="uid://ccadhbi81tur4" path="res://icons/Add.svg" id="2_tsd5b"]
 
-[node name="Editor" type="Control"]
+[node name="Editor" type="Control" node_paths=PackedStringArray("add_node_menu", "graph_edit")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8g0po")
+add_node_menu = NodePath("VBoxContainer/Panel/MarginContainer/HBoxContainer/NodeMenu")
+graph_edit = NodePath("VBoxContainer/Control/GraphEdit")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -44,6 +47,7 @@ flat = false
 unique_name_in_owner = true
 layout_mode = 2
 text = "Node"
+icon = ExtResource("2_tsd5b")
 flat = false
 alignment = 0
 
@@ -61,14 +65,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 snapping_enabled = false
 right_disconnects = true
-
-[node name="BaseNode" parent="VBoxContainer/Control/GraphEdit" instance=ExtResource("2_8g0po")]
-layout_mode = 0
-offset_left = 515.0
-offset_top = 272.0
-offset_right = 690.0
-offset_bottom = 362.0
-position_offset = Vector2(515, 272)
+script = ExtResource("2_n0aaf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
 visible = false

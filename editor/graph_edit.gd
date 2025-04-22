@@ -3,10 +3,8 @@ extends GraphEdit
 @export var add_node_menu: MenuButton
 
 @onready var nodes = {
-	"Content": preload("res://editor/ds_content_node.tscn"),
-	"Branch": preload("res://editor/ds_branch_node.tscn"),
-	"Label": preload("res://editor/ds_label_node.tscn"),
-	"End": preload("res://editor/ds_end_node.tscn")
+	"BaseNode": preload("res://editor2/nodes/base_node.tscn"),
+	"ContentNode": preload("res://editor2/nodes/content_node.tscn"),
 }
 
 var right_clicked = false

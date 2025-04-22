@@ -6,6 +6,10 @@ class_name ContentNode
 func save() -> Dictionary:
 	var dict = super.save()
 	dict.merge({
-		"content": content,
+		"content": content.text,
 	})
 	return dict
+
+func load_from(dict):
+	super.load_from(dict)
+	content.text = dict["content"]

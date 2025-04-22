@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6j2x72itvvv6"]
+
+[ext_resource type="Script" uid="uid://cewoiu0u1v4ey" path="res://editor2/nodes/choices/base_choice.gd" id="1_82w25"]
+
+[node name="Choice" type="VBoxContainer" node_paths=PackedStringArray("content")]
+script = ExtResource("1_82w25")
+content = NodePath("Text")
+
+[node name="Label" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Label"]
+layout_mode = 2
+text = "Choice"
+
+[node name="ID" type="Label" parent="Label"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "#1"
+
+[node name="Text" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Margin" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_top = 5
